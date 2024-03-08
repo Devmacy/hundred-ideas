@@ -1,21 +1,15 @@
-import {Layout, Menu, MenuProps, theme} from "antd";
+import {Layout, Menu, theme} from "antd";
 import styles from "@/pages/home/home.module.scss"
-import {Outlet, useNavigate} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import useMenuItem from "@/hooks/useMenuItem.tsx";
 
 function Home() {
     const {Header, Content, Footer} = Layout;
     const {
         token: {colorBgContainer, borderRadiusLG},
     } = theme.useToken();
-    const navigate = useNavigate();
 
-    const items: MenuProps['items'] = [
-        {
-            key: "1",
-            label: "主页",
-            onClick: () => navigate("/"),
-        },
-    ]
+    const {items} = useMenuItem()
 
     return (
         <Layout className={styles.wrap}>
