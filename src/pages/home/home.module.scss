@@ -20,7 +20,7 @@ $c-padding: 20px;
       .content {
         flex: 1;
         padding: $c-padding;
-        overflow: hidden;
+        overflow: scroll;
       }
     }
 

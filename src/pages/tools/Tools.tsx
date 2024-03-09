@@ -1,6 +1,10 @@
+import {Outlet} from "react-router-dom";
+
 function Tools() {
     return (
-        <div>Tools</div>
+        <div>
+            <Outlet/>
+        </div>
     )
 }
 
