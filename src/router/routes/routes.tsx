@@ -4,6 +4,7 @@ import {RouteObject} from "react-router-dom";
 import Tools from "@/pages/tools/Tools.tsx";
 import UUIDGenerate from "@/components/UUIDGenerate.tsx";
 import {v4} from "uuid";
+import TokenGenerate from "@/components/TokenGenerate.tsx";
 
 const routes: RouteObject[] = [
     {
@@ -21,6 +22,11 @@ const routes: RouteObject[] = [
                         id: v4(),
                         path: "/itTools/UUIDGenerate",
                         element: <UUIDGenerate/>,
+                    },
+                    {
+                        id: v4(),
+                        path: "/itTools/TokenGenerate",
+                        element: <TokenGenerate/>,
                     }
                 ]
             }
